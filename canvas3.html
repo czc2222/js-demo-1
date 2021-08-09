@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="canvas3.css">
+    <title>画布</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="100" height="100"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        canvas.width = document.documentElement.clientWidth
+        canvas.height = document.documentElement.clientHeight
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "blue";
+
+        canvas.onmousemove = (e) => {
+            console.log(e.clientX)
+            console.log(e.clientY)
+            ctx.fillRect(e.clientX, e.clientY, 5, 5);
+
+        }
+
+    </script>
+</body>
+
+</html>
