@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="canvas2.css">
+    <title>画布</title>
+</head>
+<body>
+    <div id="canvas"></div>
+        <script>
+          canvas.onmousemove = (e) => {
+             console.log(e.clientX)
+             console.log(e.clientY)
+             let div =document.createElement('div')
+             div.style.position = 'absolute'
+             div.style.width = '10px'
+             div.style.height = '10px'
+             div.style.left = e.clientX + 'px'
+             div.style.top = e.clientY + 'px'
+             canvas.appendChild(div)
+             div.style.marginLeft = '-5px'
+             div.style.marginTop = '-5px'
+             div.style.borderRadius = '50%'
+             div.style.background = 'black'
+
+          }
+        </script>
+    
+</body>
+</html>
